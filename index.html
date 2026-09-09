@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)file:///F:/web%20devolopment/rehani%20web/rehani%20web1.html#services -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rehani Company</title>
+
+  <meta name="description" content="Rehani Company - Quality honey, milk powder, food masala, coffee, green tea and cooking oil.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      background: #111827;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar {
+      min-height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* REHANI = GREEN / COMPANY = YELLOW */
+
+    .logo {
+      color: #22c55e;
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #f59e0b;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #f59e0b;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    /* HERO / HOME */
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          rgba(17, 24, 39, 0.72),
+          rgba(17, 24, 39, 0.72)
+        ),
+        url("business.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: end;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #f59e0b;
+    }
+
+    .hero p {
+      font-size: 19px;
+      margin-bottom: 30px;
+      color: #e5e7eb;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 25px;
+      border-radius: 7px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #f59e0b;
+      color: #111827;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: #fbbf24;
+    }
+
+    .btn-outline {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #111827;
+    }
+
+    /* LOGO IMAGE ON THE RIGHT SIDE OF HOME PAGE */
+
+    .home-logo-image {
+      width: 100%;
+      text-align: right;
+    }
+
+    .home-logo-image img {
+      width: 95%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 15px;
+      display: block;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #6b7280;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-image img {
+      width: 105%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .about-text h3 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .about-list li {
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .about-list li::before {
+      content: "✓";
+      color: #f59e0b;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    /* PRODUCTS */
+
+    .services {
+      background: #f5f7fa;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 35px 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .service-icon {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: #fff7df;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      transition: 0.3s;
+    }
+
+    .service-card:hover .service-icon {
+      transform: scale(1.1);
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .service-card p {
+      color: #666;
+    }
+
+    .product-badge {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: #fff3d6;
+      color: #b45309;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* WHY CHOOSE US */
+
+    .why-us {
+      background: #111827;
+      color: white;
+    }
+
+    .why-us .section-title p {
+      color: #d1d5db;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      text-align: center;
+    }
+
+    .why-card {
+      padding: 25px;
+    }
+
+    .why-card h3 {
+      font-size: 35px;
+      color: #f59e0b;
+      margin-bottom: 5px;
+    }
+
+    .why-card p {
+      color: #d1d5db;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-info h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    .contact-item {
+      margin-bottom: 15px;
+      padding: 15px;
+      background: #f5f7fa;
+      border-radius: 8px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ddd;
+      border-radius: 7px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #f59e0b;
+    }
+
+    .contact-form textarea {
+      height: 150px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+      z-index: 999;
+      transition: 0.3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #0b1120;
+      color: white;
+      padding: 40px 0 20px;
+      text-align: center;
+    }
+
+    footer h2 {
+      color: #22c55e;
+      margin-bottom: 10px;
+    }
+
+    footer h2 span {
+      color: #f59e0b;
+    }
+
+    footer p {
+      color: #9ca3af;
+    }
+
+    .footer-line {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid #374151;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111827;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .home-logo-image img {
+        height: 300px;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container navbar">
+
+      <a href="file:///F:/web%20devolopment/rehani%20web/rehani%20web1.html#home" class="logo">
+        REHANI<span>COMPANY</span>
+      </a>
+
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="file:///F:/web%20devolopment/rehani%20web/rehani%20web1.html#home">Home</a></li>
+        <li><a href="file:///F:/web%20devolopment/rehani%20web/rehani%20web1.html#about">About</a></li>
+        <li><a href="file:///F:/web%20devolopment/rehani%20web/rehani%20web1.html#services">Products</a></li>
+        <li><a href="file:///F:/web%20devolopment/rehani%20web/rehani%20web1.html#contact">Contact</a></li>
+      </ul>
+
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+
+      <div class="hero-content">
+        <h1>
+          Quality Products For <span>Every Home</span>
+        </h1>
+
+        <p>
+          We provide quality food and household products including honey,
+          milk powder, food masala, coffee, green tea and cooking oil.
+        </p>
+
+        <div class="buttons">
+          <a href="file:///F:/web%20devolopment/rehani%20web/rehani%20web1.html#services" class="btn btn-primary">View Our Products</a>
+          <a href="file:///F:/web%20devolopment/rehani%20web/rehani%20web1.html#contact" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- YOUR LOGO PICTURE ON HOME PAGE: RIGHT SIDE -->
+      <div class="home-logo-image">
+        <img src="./Rehani Company_files/logo.png" alt="Rehani Company Logo">
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>About Us</h2>
+        <p>Quality, trust and customer satisfaction</p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-image">
+          <img src="./Rehani Company_files/about1.jpg" alt="Our food products">
+        </div>
+
+        <div class="about-text">
+          <h3>Quality You Can Trust</h3>
+
+          <p>
+            Welcome to REHANI COMPANY. We are focused on providing quality food
+            products for families, shops, restaurants and businesses.
+          </p>
+
+          <p>
+            Shirkada Rehani waxay ka diiwangashantahay Wasaaradda Ganacsiga iyo
+            Warshadaha ee Dowladda Somalia. Shirkadu waxay hormuud u tahay
+            horumarinta iyo xayaysiinta caalamiga ah ee wax soosaarka Dalka.
+          </p>
+
+          <ul class="about-list">
+            <li>Horumarinta wax soo saarka dalka sida xawaashka, coffee-ga, malabka, saliida cunnada iyo caano booraha.</li>
+            <li>Dayactirka iyo la socodka tayada cunnada iyo adeegyada bulshada isticmaasho.</li>
+            <li>Horumarinta hababka wax soo saarka ee wanaagsan iyada oo loo marayo cilmi-baaris.</li>
+            <li>Muhimada shirkadu waa qancinta macaamiisheeda.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Our Products</h2>
+        <p>Discover our selection of quality products</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">🍯</div>
+          <h3>Honey</h3>
+          <p>Natural and delicious honey, perfect for your daily meals and drinks.</p>
+          <span class="product-badge">Premium Quality</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🥛</div>
+          <h3>Milk Powder</h3>
+          <p>Quality milk powder suitable for families, shops and businesses.</p>
+          <span class="product-badge">Quality Product</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🌶️</div>
+          <h3>Food Masala</h3>
+          <p>Delicious spices and masala to make your meals more flavorful.</p>
+          <span class="product-badge">Great Taste</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">☕</div>
+          <h3>Coffee</h3>
+          <p>Rich and aromatic coffee for a refreshing start to your day.</p>
+          <span class="product-badge">Fresh Coffee</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🍵</div>
+          <h3>Green Tea</h3>
+          <p>Refreshing green tea for your everyday tea experience.</p>
+          <span class="product-badge">Fresh Tea</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🫒</div>
+          <h3>Cooking Oil</h3>
+          <p>Quality cooking oil for everyday cooking and food preparation.</p>
+          <span class="product-badge">Quality Oil</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="why-us">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Why Choose Us?</h2>
+        <p>We are committed to quality and customer satisfaction.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>100+</h3>
+          <p>Happy Customers</p>
+        </div>
+
+        <div class="why-card">
+          <h3>6+</h3>
+          <p>Quality Products</p>
+        </div>
+
+        <div class="why-card">
+          <h3>100%</h3>
+          <p>Customer Focus</p>
+        </div>
+
+        <div class="why-card">
+          <h3>24/7</h3>
+          <p>Customer Support</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>Order our products or ask us a question</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+
+          <p>
+            Contact us for product information, prices, wholesale orders
+            or general inquiries.
+          </p>
+
+          <div class="contact-item">📞 Phone: +252 61 4960000</div>
+          <div class="contact-item">📱 WhatsApp: +252 61 4960000</div>
+          <div class="contact-item">📧 Email: info@rehani.com</div>
+          <div class="contact-item">📍 Location: Somalia</div>
+        </div>
+
+        <form class="contact-form" onsubmit="sendMessage(event)">
+          <input type="text" id="name" placeholder="Your Name" required="">
+          <input type="text" id="phone" placeholder="Your Phone Number" required="">
+          <input type="text" id="product" placeholder="Product You Want" required="">
+
+          <textarea id="message" placeholder="Write your message or order..." required=""></textarea>
+
+          <button type="submit" class="btn btn-primary">
+            Order / Send Message
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/252614960000" class="whatsapp" target="_blank" title="Chat with us on WhatsApp">
+    ☎
+  </a>
+
+  <footer>
+    <div class="container">
+
+      <h2>REHANI<span>COMPANY</span></h2>
+
+      <p>
+        Quality Honey • Milk Powder • Masala • Coffee • Green Tea • Oil
+      </p>
+
+      <div class="footer-line">
+        <p>© 2026 REHANI COMPANY. All Rights Reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+
+    function sendMessage(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const product = document.getElementById("product").value;
+      const message = document.getElementById("message").value;
+
+      const businessNumber = "252614960000";
+
+      const text =
+        `Hello REHANI COMPANY,%0A%0A` +
+        `Name: ${encodeURIComponent(name)}%0A` +
+        `Customer Phone: ${encodeURIComponent(phone)}%0A` +
+        `Product: ${encodeURIComponent(product)}%0A%0A` +
+        `Message: ${encodeURIComponent(message)}`;
+
+      window.open(
+        `https://wa.me/${businessNumber}?text=${text}`,
+        "_blank"
+      );
+    }
+  </script>
+
+
+</body></html>
